@@ -1,32 +1,8 @@
 "use client"
+import useCountdown from "@/hooks/useCountdown";
 import Image from "next/image";
-import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const useCountdown = (targetDate: string): number[] => {
-    const countDownDate: number = new Date(targetDate).getTime();
-    const [countDown, setCountDown] = useState<number>(countDownDate - new Date().getTime());
-
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCountDown(countDownDate - new Date().getTime());
-      }, 1000);
-
-      return () => clearInterval(interval);
-    }, [countDownDate]);
-
-    return getReturnValues(countDown);
-  };
-
-  const getReturnValues = (countDown: number): number[] => {
-    const days: number = Math.floor(countDown / (1000 * 60 * 60 * 24));
-    const hours: number = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes: number = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds: number = Math.floor((countDown % (1000 * 60)) / 1000);
-
-    return [days, hours, minutes, seconds];
-  };
-
   let [days, hours, minutes, seconds]: number[] = useCountdown("June 25, 2023 9:30:00");
 
   return (
