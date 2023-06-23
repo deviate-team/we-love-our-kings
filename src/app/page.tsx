@@ -38,7 +38,7 @@ export default function Home() {
         <h1 className="text-5xl text-white font-bold mb-8">
           รอทอดพระเนตรเร็วๆนี้
         </h1>
-        <p>เหลืออีก 0{days} วัน {hours} ชั่วโมง {minutes} นาที {seconds} วินาที</p>
+        <p>เหลืออีก 0{days} วัน {hours} ชั่วโมง {minutes} นาที {seconds} วินาที.</p>
       </div>
     </main>
   )
