@@ -35,7 +35,7 @@ export default function Home() {
         <div className="w-64 h-64 relative">
           <Image src='https://king.kapook.com/kingrama10/images/king.png' alt="banner" fill />
         </div>
-        <h1 className="text-5xl text-white font-bold mb-8">
+        <h1 className="text-5xl text-white font-bold mb-8"></h1>
           รอทอดพระเนตรเร็วๆนี้
         </h1>
         <p>เหลืออีก 0{days} วัน {hours} ชั่วโมง {minutes} นาที {seconds} วินาที.</p>
