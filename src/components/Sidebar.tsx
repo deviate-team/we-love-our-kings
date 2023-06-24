@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -9,23 +10,23 @@ const Sidebar = () => {
         <div className="px-3 overflow-y-auto">
           <ul className="space-y-2 font-medium">
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base mb-10"
               >
                 <span>ข่าวสารและกิจกรรม</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base"
               >
                 <span>มัลติมิเดีย</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -44,10 +45,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   อัลบั้มภาพ
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -62,10 +63,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   ภาพยนตร์เฉลิมพระเกียรติ์
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -80,10 +81,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   วิดิโอ
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg mb-10"
               >
@@ -102,18 +103,18 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   บทเพลงเฉลิมพระเกียรติ
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base"
               >
                 <span>เนื้อหาที่น่าสนใจ</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -132,10 +133,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   พระราชประวัติ ร.๑๐
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -154,10 +155,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   การสวรรคตของ ร.๙
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -176,10 +177,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   พระเมรุมาศ ร.๙
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg mb-10"
               >
@@ -198,18 +199,18 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   พระบรมมหาราชวัง
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base"
               >
                 <span>ท่องเที่ยวเชิงการศึกษา</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -228,10 +229,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   โครงการชั่งหัวมัน
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -250,10 +251,10 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   ศูนย์ภูมิรักษ์ธรรมชาติ
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
@@ -272,7 +273,7 @@ const Sidebar = () => {
                 <span className="flex-1 ml-3 whitespace-nowrap text-blue-800 font-light">
                   พระตำหนักจิตรลดารโหฐาน
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
