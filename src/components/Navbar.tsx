@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React, { Fragment, useState } from 'react';
 
 interface NavbarProps {
