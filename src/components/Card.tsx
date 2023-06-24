@@ -2,10 +2,10 @@ import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ name, full_name }: IKing) => {
+const Card = ({ id, name, full_name }: IKing) => {
     return (
         <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <Link href={`/king/${name}`}>
+            <Link href={`/king/${id}`}>
                 <article className="overflow-hidden shadow-lg">
                     <Image
                         alt="image"
