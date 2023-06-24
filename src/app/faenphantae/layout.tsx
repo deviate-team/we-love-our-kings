@@ -8,8 +8,7 @@ export const metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <main className="bg-[url('/background.jpeg')] bg-repeat h-screen w-screen">
-        <Banner />
+      <main className="bg-[url('/background.jpeg')] bg-repeat h-screen">
         <section>{children}</section>
       </main>
     </>

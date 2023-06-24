@@ -1,74 +1,73 @@
 "use client";
 
+import { IQuestion } from "@/interfaces/question";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Fean() {
-  const [question, setQuestion] = useState({
-    question: "พ่อชอบ ประเทศไหน",
-    answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
-    correctAnswer: "เยอรมัน",
-  });
+  const [question, setQuestion] = useState<IQuestion[]>();
   const [score, setScore] = useState(0);
   const [step, setStep] = useState(1);
   const [done, setDone] = useState(false);
 
-  function getQuestion() {
-    // fetch("")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setQuestion(data.question);
-    //   });
+  const bgColor = ["bg-red-500", "bg-blue-500", "bg-yellow-500", "bg-green-500"]
+
+  async function getQuestion() {
+    fetch("/api/questions")
+      .then((res) => res.json())
+      .then((data) => {
+        setQuestion([
+          ...data,
+          {
+            question: "คุณรักพ่อไหม",
+            answer: ["รัก", "ไม่รัก"],
+            correctAnswer: "รัก",
+          },
+        ]);
+      });
   }
+
+  useEffect(() => {
+    getQuestion();
+  }, []);
 
   function formHandler(answer: string) {
-    let currentScore = 0;
-
-    if (question.correctAnswer === answer) {
-      setScore((prev) => prev + 1);
-      currentScore = score;
-    }
-
-    if (step >= 10) {
-      submitScore(currentScore, answer);
-    } else if (step === 9) {
-      setStep((prev) => prev + 1);
-      setQuestion({
-        question: "คุณรักพ่อไหม",
-        answer: ["รัก", "ไม่รัก"],
-        correctAnswer: "รัก",
-      });
-    } else {
-      getNextQuestion();
-    }
-  }
-
-  function submitScore(score: number, answer: string) {
-    if (answer === "ไม่รัก") {
-      setScore(0);
-    }
-
-    setDone(true);
-  }
-
-  function getNextQuestion() {
     setStep((prev) => prev + 1);
 
-    getQuestion();
+    if (answer === "รัก") {
+      setScore(100);
+    } else {
+      setScore(Math.floor(Math.random() * 49));
+    }
+
+    if (step >= 10) return setDone(true);
   }
 
-  // useEffect(() => {
-  //   getQuestion();
-  // }, []);
+  function shuffle(array: string[]) {
+    let currentIndex = array.length,
+      randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
 
   return (
-    <section className="flex flex-col mt-10 container w-[30ch] mx-auto text-3xl">
+    <section className="flex flex-col pt-10 container w-[calc(40ch+16px)] mx-auto text-3xl">
       {done ? (
         <>
           <h2 className="flex">
             <span className="font-bold">ชื่อของท่าน</span>
             <div className="grow" />
-            <span>{score}/10 คะแนน</span>
+            <span>{score}%</span>
           </h2>
           <br />
           <input
@@ -83,29 +82,34 @@ export default function Fean() {
             ดูคะแนน
           </Link>
         </>
-      ) : (
+      ) : question ? (
         <>
-          <h2>
-            <span className="font-bold">{step}: </span>
-            <span className="font-semibold">{question.question}</span>
-          </h2>
+          <div className="p-10 bg-white shadow-xl">
+            <h2>
+              <span className="font-bold">{step}: </span>
+              <span className="font-semibold">{question[step - 1].question}</span>
+            </h2>
+          </div>
           <br />
           <form>
-            <section className="grid grid-cols-2 justify-items-center gap-16">
-              {question.answer.map((ans) => (
-                <section key={ans}>
+            <section className="grid grid-cols-2 justify-items-center gap-4">
+              {shuffle(question[step - 1].answer).map((ans, index) => (
+                <section
+                  key={ans}
+                  className={`h-16 group cursor-pointer shadow-xl w-[20ch] text-center flex justify-center text-white ${bgColor[index]}`}
+                  onClick={() => formHandler(ans)}
+                >
                   <input
                     type="button"
-                    onClick={() => formHandler(ans)}
                     value={ans}
-                    className="cursor-pointer hover:font-semibold"
+                    className="group-hover:font-semibold cursor-pointer"
                   />
                 </section>
               ))}
             </section>
           </form>
         </>
-      )}
+      ) : null}
     </section>
   );
 }

@@ -11,8 +11,8 @@ async function getKnigDataById(id: number) {
 export default async function DetailPage({ id }: { id: number }) {
     const data = (await getKnigDataById(id)) as IKing;
     return (
-        <section className="bg-[url('/header-bg.png')] bg-repeat min-h-screen">
-            <div className="py-8 text-left lg:py-16 lg:px-12 mt-10">
+        <section className="bg-[url('/header-bg.png')] bg-repeat h-full">
+            <div className="py-8 text-left lg:py-16 lg:px-12">
                 <h1 className="mb-4 text-4xl font-normal tracking-tight leading-none text-blue-800 md:text-xl lg:text-2xl">{data.name}</h1>
                 <p className="mb-8 text-lg font-normal text-blue-700 lg:text-base text-left"></p>
                 {data.work?.map((work, index) => (
