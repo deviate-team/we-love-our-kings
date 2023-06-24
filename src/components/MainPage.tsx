@@ -1,4 +1,3 @@
-import { KINGS } from "@/constants/kings";
 import { IKing } from "@/interfaces/king";
 import Card from "./Card";
 
@@ -13,7 +12,7 @@ async function getKingData() {
 }
 
 export default async function MainPage() {
-    const data = KINGS as IKing[];
+    const data = (await getKingData()) as IKing[];
     return (
         <div className="container my-12 mx-auto px-4 mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
