@@ -1,3 +1,5 @@
+"use client"
+
 import React, { Fragment, useState } from 'react';
 
 interface NavbarProps {
@@ -20,7 +22,7 @@ const Navbar = ({ children }: NavbarProps) => {
                         <div className="flex items-center justify-start">
                             <button type="button" className="inline-flex items-center p-2 text-sm text-blue-800" onClick={handleNavbar}>
                                 <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path clipRule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                                    <path clipRule="evenodd" fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                                 </svg>
                             </button>
                         </div>
@@ -41,7 +43,7 @@ const Navbar = ({ children }: NavbarProps) => {
                                         <a href="/" className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight">พระราชดำรัส</a>
                                     </li>
                                     <li>
-                                        <a href="/" className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight">สาระน่ารู้</a>
+                                        <a href="/faenphantae" className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight">แฟนพันธ์แท้พ่อหลวง</a>
                                     </li>
                                 </ul>
                             </div>
@@ -51,8 +53,8 @@ const Navbar = ({ children }: NavbarProps) => {
                 </div>
             </nav>
 
-            <aside className={`absolute left-0 z-40 w-64 h-screen pt-20 pb-10 transition-transform bg-[url('/background.jpeg')] border-r border-gray-200  ${navbarClick ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div className="px-3 pb-96 overflow-y-auto bg-[url('/background.jpeg')]">
+            <aside className={`absolute left-0 z-40 w-64 pt-20 pb-10 transition-transform border border-red-700 bg-[url('/background.jpeg')] bg-repeat ${navbarClick ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className="px-3 overflow-y-auto">
                     <ul className="space-y-2 font-medium">
                         <li>
                             <a href="/" className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base mb-10">
