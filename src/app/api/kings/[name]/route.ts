@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import path from "path";
-import fs from "fs/promises";
+import { getDataFromJson } from "@/utils/file";
 
 export async function GET(
   request: Request,
@@ -8,10 +7,7 @@ export async function GET(
 ) {
   const { name } = params;
 
-  const filePath = path.join(process.cwd(), "./src/data/kings.json");
-  const data = await fs.readFile(filePath, "utf8");
-
-  const kings = JSON.parse(data);
+  const kings = await getDataFromJson("kings");
 
   const king = kings.find((king: { name: string }) => king.name === name);
 
