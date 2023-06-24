@@ -20,7 +20,7 @@ const Navbar = ({ children }: NavbarProps) => {
                         <div className="flex items-center justify-start">
                             <button type="button" className="inline-flex items-center p-2 text-sm text-blue-800" onClick={handleNavbar}>
                                 <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                                    <path clipRule="evenodd" fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                                 </svg>
                             </button>
                         </div>
@@ -65,7 +65,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clipRule="evenodd" />
                                 </svg>
@@ -73,7 +73,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
                                 </svg>
@@ -81,7 +81,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
                                 </svg>
@@ -89,7 +89,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 mb-10">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg mb-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clipRule="evenodd" />
                                 </svg>
@@ -102,7 +102,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clipRule="evenodd" />
                                 </svg>
@@ -110,7 +110,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clipRule="evenodd" />
                                 </svg>
@@ -118,7 +118,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clipRule="evenodd" />
                                 </svg>
@@ -139,7 +139,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clipRule="evenodd" />
                                 </svg>
@@ -147,7 +147,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clipRule="evenodd" />
                                 </svg>
@@ -155,7 +155,7 @@ const Navbar = ({ children }: NavbarProps) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <a href="/" className="flex items-center p-2 text-gray-900 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-800">
                                     <path fillRule="evenodd" d="M6 3a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3H6zm1.5 1.5a.75.75 0 00-.75.75V16.5a.75.75 0 001.085.67L12 15.089l4.165 2.083a.75.75 0 001.085-.671V5.25a.75.75 0 00-.75-.75h-9z" clipRule="evenodd" />
                                 </svg>

@@ -1,7 +1,7 @@
-interface IKing {
+export interface IKing {
     name: string;
     full_name: string;
-    work: IWork;
+    work?: IWork;
 }
 
 interface IWork {

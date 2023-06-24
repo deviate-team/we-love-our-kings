@@ -1,21 +1,18 @@
 "use client"
 import Banner from "@/components/Banner";
-import Card from "@/components/Card";
+import MainPage from "@/components/MainPage";
 import Navbar from "@/components/Navbar";
-import { CARD } from "@/constants/card";
+import { IKing } from "@/interfaces/king";
 import { Fragment } from "react";
 
-export default function Home() {
-
+export default async function Home() {
   return (
     <Fragment>
       <Banner />
       <Navbar>
         <div className="container my-12 mx-auto px-4 md:px-12 mt-20">
           <div className="flex flex-wrap -mx-1 lg:-mx-4">
-            {CARD.map((item, index) => (
-              <Card key={index} {...item} />
-            ))}
+            <MainPage />
           </div>
         </div>
       </Navbar>
