@@ -1,7 +1,8 @@
 export interface IKing {
+    id: number;
     name: string;
     full_name: string;
-    work?: IWork;
+    work?: IWork[];
 }
 
 interface IWork {
