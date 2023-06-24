@@ -8,7 +8,6 @@ export default function faen() {
     answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
     correctAnswer: "เยอรมัน",
   });
-  const [selectedAnswer, setSelectedAnswer] = useState("");
   const [score, setScore] = useState(0);
   const [step, setStep] = useState(1);
 
@@ -20,35 +19,33 @@ export default function faen() {
     //   });
   }
 
-  function formHandler(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
+  function formHandler(answer: string) {
     let currentScore = 0;
 
-    if (question.correctAnswer === selectedAnswer) {
+    if (question.correctAnswer === answer) {
       setScore((prev) => prev + 1);
       currentScore = score;
     }
 
     if (step >= 10) {
-      submitScore(currentScore);
+      submitScore(currentScore, answer);
     } else {
-      if (question.answer.indexOf(selectedAnswer) === -1)
-        return alert("Please select an answer");
-
       getNextQuestion();
     }
   }
 
-  function submitScore(score: number) {
-    if (question.correctAnswer === selectedAnswer) {
+  function submitScore(score: number, answer: string) {
+    if (question.correctAnswer === answer) {
       score += 1;
     }
+
+    alert(`คุณได้ ${score}/10 คะแนน`);
+    setScore(0);
+    setStep(1);
   }
 
   function getNextQuestion() {
     setStep((prev) => prev + 1);
-    setSelectedAnswer("");
 
     getQuestion();
   }
@@ -58,30 +55,25 @@ export default function faen() {
   // }, []);
 
   return (
-    <section>
+    <section className="flex flex-col mt-10 container w-[30ch] mx-auto text-3xl">
       <h2>
-        {step}: {question.question}
+        <span className="font-bold">{step}: </span>
+        <span className="font-semibold">{question.question}</span>
       </h2>
-      <form onSubmit={formHandler}>
-        {question.answer.map((ans) => (
-          <section key={ans}>
-            <input
-              type="radio"
-              id={ans}
-              name="faen"
-              value={ans}
-              checked={ans === selectedAnswer}
-              onChange={() => {
-                setSelectedAnswer(ans);
-              }}
-            />
-            <label htmlFor={ans}>{ans}</label>
-          </section>
-        ))}
-        <br />
-        <p>Selected answer: {selectedAnswer}</p>
-        <p>Score: {score}</p>
-        <button type="submit">{step === 10 ? "ส่ง" : "ถัดไป"}</button>
+      <br />
+      <form>
+        <section className="grid grid-cols-2 justify-items-center gap-16">
+          {question.answer.map((ans) => (
+            <section key={ans}>
+              <input
+                type="button"
+                onClick={() => formHandler(ans)}
+                value={ans}
+                className="cursor-pointer hover:font-semibold"
+              />
+            </section>
+          ))}
+        </section>
       </form>
     </section>
   );
