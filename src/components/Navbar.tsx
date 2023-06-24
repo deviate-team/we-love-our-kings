@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { Fragment } from "react";
 
 interface NavbarProps {
@@ -36,44 +37,44 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
                             <div className="flex items-center ml-3">
                                 <ul className="flex p-4 md:p-0 mt-4 font-medium borderrounded-lg flex-row space-x-14 md:mt-0 border-0">
                                     <li>
-                                        <a
+                                        <Link
                                             href="/"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
                                             หน้าแรก
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
+                                        <Link
                                             href="/"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
                                             ราชวงศ์จักรี
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
+                                        <Link
                                             href="/"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
                                             พระราชกรณียกิจ
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
+                                        <Link
                                             href="/wellwishes"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
                                             ลงนามถวายพระพร
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
+                                        <Link
                                             href="/faenphantae"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
                                             แฟนพันธ์แท้พ่อหลวง
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
