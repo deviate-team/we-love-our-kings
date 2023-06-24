@@ -41,7 +41,7 @@ const Navbar = ({ children }: NavbarProps) => {
                                         <a href="/" className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight">พระราชดำรัส</a>
                                     </li>
                                     <li>
-                                        <a href="/" className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight">สาระน่ารู้</a>
+                                        <a href="/faenphantae" className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight">แฟนพันธ์แท้พ่อหลวง</a>
                                     </li>
                                 </ul>
                             </div>
