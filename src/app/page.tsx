@@ -1,6 +1,7 @@
 "use client"
 import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
+import { CARD } from "@/constants/card";
 import Image from "next/image";
 import { Fragment } from "react";
 
