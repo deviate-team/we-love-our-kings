@@ -4,40 +4,78 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Fean() {
-  const [question, setQuestion] = useState({
-    question: "พ่อชอบ ประเทศไหน",
-    answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
-    correctAnswer: "เยอรมัน",
-  });
+  const [question, setQuestion] = useState([
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+    {
+      question: "พ่อชอบ ประเทศไหน",
+      answer: ["ไทย", "จีน", "อังกฤษ", "เยอรมัน"],
+      correctAnswer: "เยอรมัน",
+    },
+  ]);
   const [score, setScore] = useState(0);
   const [step, setStep] = useState(1);
   const [done, setDone] = useState(false);
 
   function getQuestion() {
-    // fetch("")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setQuestion(data.question);
-    //   });
+    fetch("/api/")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // setQuestion(data.question);
+      });
   }
 
   function formHandler(answer: string) {
     let currentScore = 0;
 
-    if (question.correctAnswer === answer) {
-      setScore((prev) => prev + 1);
+    if (question[step - 1].correctAnswer === answer) {
+      stepHandler();
       currentScore = score;
     }
 
     if (step >= 10) {
       submitScore(currentScore, answer);
     } else if (step === 9) {
-      setStep((prev) => prev + 1);
-      setQuestion({
-        question: "คุณรักพ่อไหม",
-        answer: ["รัก", "ไม่รัก"],
-        correctAnswer: "รัก",
-      });
+      getLastQuestion();
     } else {
       getNextQuestion();
     }
@@ -51,15 +89,29 @@ export default function Fean() {
     setDone(true);
   }
 
-  function getNextQuestion() {
+  function stepHandler() {
     setStep((prev) => prev + 1);
-
-    getQuestion();
   }
 
-  // useEffect(() => {
-  //   getQuestion();
-  // }, []);
+  function getLastQuestion() {
+    stepHandler();
+    setQuestion((prev) => [
+      ...prev,
+      {
+        question: "คุณรักพ่อไหม",
+        answer: ["รัก", "ไม่รัก"],
+        correctAnswer: "รัก",
+      },
+    ]);
+  }
+
+  function getNextQuestion() {
+    stepHandler();
+  }
+
+  useEffect(() => {
+    getQuestion();
+  }, []);
 
   return (
     <section className="flex flex-col mt-10 container w-[30ch] mx-auto text-3xl">
@@ -87,12 +139,12 @@ export default function Fean() {
         <>
           <h2>
             <span className="font-bold">{step}: </span>
-            <span className="font-semibold">{question.question}</span>
+            <span className="font-semibold">{question[step - 1].question}</span>
           </h2>
           <br />
           <form>
             <section className="grid grid-cols-2 justify-items-center gap-16">
-              {question.answer.map((ans) => (
+              {question[step - 1].answer.map((ans) => (
                 <section key={ans}>
                   <input
                     type="button"
