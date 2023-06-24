@@ -2,28 +2,24 @@ import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ id, name, full_name }: IKing) => {
+const Card = ({ id, name, fullName, bio, image }: IKing) => {
     return (
-        <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <Link href={`/king/${id}`}>
-                <article className="overflow-hidden shadow-lg">
-                    <Image
-                        alt="image"
-                        className="block h-auto w-full"
-                        src="/banner.jpeg"
-                        width={100}
-                        height={100}
-                    />
-                    <div className="text-lg p-4 bg-white">
-                        <h1 className="text-lg text-blue-800">
-                            {name}
-                        </h1>
-                        <p className="text-grey-darker text-sm text-blue-800 font-extralight mt-3">{full_name}</p>
+        <Link href={`/king/${id}`}>
+            <div className="h-full flex-1 bg-white relative shadow-lg">
+                <div className="h-80 relative rounded-lg">
+                    <div className="block h-full relative">
+                        <Image src={image} alt="test" className="h-full absolute object-cover object-top" width={1000} height={1000} />
                     </div>
-                    <Image src='/border-card.png' alt="border-card" height={1000} width={1000} className=" w-full" />
-                </article>
-            </Link>
-        </div >
+                </div>
+                <div className="text-lg p-4">
+                    <h1 className="text-lg text-blue-800">
+                        {name}
+                    </h1>
+                    <p className="text-grey-darker text-sm text-blue-800 font-extralight mt-3">{fullName}</p>
+                </div>
+                <Image src='/border-card.png' alt="border-card" height={1000} width={1000} className="absolute bottom-0" />
+            </div>
+        </Link>
     )
 }
 

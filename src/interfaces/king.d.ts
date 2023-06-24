@@ -1,7 +1,9 @@
 export interface IKing {
     id: number;
     name: string;
-    full_name: string;
+    fullName: string;
+    bio: string;
+    image: string;
     work?: IWork[];
 }
 
