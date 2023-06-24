@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import { getDataFromJson } from "@/utils/file";
 
 export async function GET(request: Request) {
-  const kings = await getDataFromJson("kings");
+  const res = await fetch("https://raw.githubusercontent.com/deviate-team/we-love-our-kings/dev/src/data/kings.json", {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
 
-  return NextResponse.json(JSON.parse(kings));
+  const kings = await res.json();
+
+  return NextResponse.json(kings);
 }
