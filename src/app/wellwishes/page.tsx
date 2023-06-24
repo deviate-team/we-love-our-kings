@@ -1,7 +1,7 @@
 export default async function WellWishes() {
   return (
     <>
-      <form className="flex flex-col mt-10 container w-[30ch] mx-auto text-3xl">
+      <form className="flex flex-col pt-10 container w-[30ch] mx-auto text-3xl">
         <label htmlFor="name" className="font-bold text-6xl text-center">
           ข้าพระพุทธเจ้า
         </label>

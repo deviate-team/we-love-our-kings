@@ -1,5 +1,3 @@
-import Banner from "@/components/Banner";
-
 export const metadata = {
   title: "ลงนามถวายพระพร",
   description: "ลงนามถวายพระพร",
@@ -11,8 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="bg-[url('/background.jpeg')] bg-repeat h-screen w-screen">
-      <Banner />
+    <main className="bg-[url('/background.jpeg')] bg-repeat h-screen w-full">
       <section>{children}</section>
     </main>
   );

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 
 interface NavbarProps {
     toggleSidebar: () => void;
@@ -61,10 +61,10 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/"
+                                            href="/wellwishes"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
-                                            พระราชดำรัส
+                                            ลงนามถวายพระพร
                                         </a>
                                     </li>
                                     <li>

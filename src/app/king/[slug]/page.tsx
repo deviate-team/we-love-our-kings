@@ -9,8 +9,10 @@ interface PageProps {
 
 const Page = async ({ params }: PageProps) => {
   const slug = params.slug;
+  const title = `KING RAMA ${slug} -  We love our king`;
   return (
     <Fragment>
+      <title>{title}</title>
       <DetailPage id={slug} />
     </Fragment>
   );
