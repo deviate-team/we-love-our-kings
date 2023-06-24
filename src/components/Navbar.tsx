@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 interface NavbarProps {
     children?: React.ReactNode;
@@ -53,7 +53,7 @@ const Navbar = ({ children }: NavbarProps) => {
                 </div>
             </nav>
 
-            <aside className={`absolute left-0 z-40 w-64 pt-20 pb-10 transition-transform border border-red-700 bg-[url('/background.jpeg')] bg-repeat ${navbarClick ? 'translate-x-0' : '-translate-x-full'}`}>
+            <aside className={`absolute z-40 w-64 transition-transform border-r border-gray-200 bg-[url('/background.jpeg')] bg-repeat ${navbarClick ? 'translate-x-0' : '-translate-x-full'} min-h-screen`}>
                 <div className="px-3 overflow-y-auto">
                     <ul className="space-y-2 font-medium">
                         <li>
