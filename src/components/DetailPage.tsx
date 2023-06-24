@@ -1,15 +1,12 @@
+import { KINGS } from "@/constants/kings";
 import { IKing } from "@/interfaces/king";
 
-async function getKnigDataById(id: number) {
-    const response = await fetch(`http://localhost:3000/api/kings/${id}`);
-    if (response.ok) {
-        return response.json();
-    }
-    return [];
+const getKingDataById = (id: number) => {
+    const data = KINGS as IKing[];
+    return data[id - 1];
 }
-
 export default async function DetailPage({ id }: { id: number }) {
-    const data = (await getKnigDataById(id)) as IKing;
+    const data = getKingDataById(id);
     return (
         <section className="bg-[url('/header-bg.png')] bg-repeat h-full">
             <div className="py-8 text-left lg:py-16 lg:px-12">
