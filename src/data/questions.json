@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital of Australia?",
+    "answer": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "correctAnswer": "Canberra"
+  },
+  {
+    "id": 2,
+    "question": "Who painted the Mona Lisa?",
+    "answer": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Leonardo da Vinci"
+  },
+  {
+    "id": 3,
+    "question": "Which country is known for producing the most coffee?",
+    "answer": ["Brazil", "Colombia", "Ethiopia", "Vietnam"],
+    "correctAnswer": "Brazil"
+  },
+  {
+    "id": 4,
+    "question": "Which planet is closest to the Sun?",
+    "answer": ["Mercury", "Venus", "Earth", "Mars"],
+    "correctAnswer": "Mercury"
+  },
+  {
+    "id": 5,
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "answer": [
+      "William Shakespeare",
+      "George Bernard Shaw",
+      "Anton Chekhov",
+      "Oscar Wilde"
+    ],
+    "correctAnswer": "William Shakespeare"
+  },
+  {
+    "id": 6,
+    "question": "Which animal is known as the 'King of the Jungle'?",
+    "answer": ["Tiger", "Lion", "Elephant", "Giraffe"],
+    "correctAnswer": "Lion"
+  },
+  {
+    "id": 7,
+    "question": "What is the chemical symbol for gold?",
+    "answer": ["Ag", "Au", "Fe", "Hg"],
+    "correctAnswer": "Au"
+  },
+  {
+    "id": 8,
+    "question": "Which year did World War II end?",
+    "answer": ["1939", "1942", "1945", "1950"],
+    "correctAnswer": "1945"
+  },
+  {
+    "id": 9,
+    "question": "Which continent is the largest by land area?",
+    "answer": ["Africa", "Asia", "North America", "South America"],
+    "correctAnswer": "Asia"
+  },
+  {
+    "id": 10,
+    "question": "What is the tallest mountain in the world?",
+    "answer": ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
+    "correctAnswer": "Mount Everest"
+  },
+  {
+    "id": 11,
+    "question": "Who is known as the inventor of the telephone?",
+    "answer": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Nikola Tesla",
+      "Albert Einstein"
+    ],
+    "correctAnswer": "Alexander Graham Bell"
+  },
+  {
+    "id": 12,
+    "question": "Which city hosted the 2016 Summer Olympics?",
+    "answer": ["Rio de Janeiro", "London", "Tokyo", "Sydney"],
+    "correctAnswer": "Rio de Janeiro"
+  },
+  {
+    "id": 13,
+    "question": "What is the largest organ in the human body?",
+    "answer": ["Brain", "Heart", "Liver", "Skin"],
+    "correctAnswer": "Skin"
+  },
+  {
+    "id": 14,
+    "question": "Which famous scientist developed the theory of relativity?",
+    "answer": [
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Albert Einstein",
+      "Stephen Hawking"
+    ],
+    "correctAnswer": "Albert Einstein"
+  },
+  {
+    "id": 15,
+    "question": "Which country is home to the Great Barrier Reef?",
+    "answer": ["Australia", "Brazil", "India", "Canada"],
+    "correctAnswer": "Australia"
+  },
+  {
+    "id": 16,
+    "question": "What is the largest planet in our solar system?",
+    "answer": ["Jupiter", "Saturn", "Neptune", "Uranus"],
+    "correctAnswer": "Jupiter"
+  },
+  {
+    "id": 17,
+    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
+    "answer": [
+      "Harper Lee",
+      "J.D. Salinger",
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway"
+    ],
+    "correctAnswer": "Harper Lee"
+  },
+  {
+    "id": 18,
+    "question": "Which country is known as the 'Land of the Rising Sun'?",
+    "answer": ["China", "South Korea", "Japan", "Thailand"],
+    "correctAnswer": "Japan"
+  },
+  {
+    "id": 19,
+    "question": "What is the currency of Germany?",
+    "answer": ["Euro", "Pound Sterling", "Yen", "Dollar"],
+    "correctAnswer": "Euro"
+  },
+  {
+    "id": 20,
+    "question": "Which element has the chemical symbol 'Na'?",
+    "answer": ["Sodium", "Nitrogen", "Nickel", "Neon"],
+    "correctAnswer": "Sodium"
+  }
+]
