@@ -1,14 +1,16 @@
 "use client";
 
+import { IQuestion } from "@/interfaces/question";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { IQuestion } from "@/interfaces/question";
 
 export default function Fean() {
   const [question, setQuestion] = useState<IQuestion[]>();
   const [score, setScore] = useState(0);
   const [step, setStep] = useState(1);
   const [done, setDone] = useState(false);
+
+  const bgColor = ["bg-red-500", "bg-blue-500", "bg-yellow-500", "bg-green-500"]
 
   async function getQuestion() {
     fetch("/api/questions")
@@ -32,13 +34,13 @@ export default function Fean() {
   function formHandler(answer: string) {
     setStep((prev) => prev + 1);
 
-    if (step >= 10) return setDone(true);
-
-    if (!question) return;
-
-    if (answer === question[step - 1].correctAnswer) {
-      setScore((prev) => prev + 1);
+    if (answer === "รัก") {
+      setScore(100);
+    } else {
+      setScore(Math.floor(Math.random() * 49));
     }
+
+    if (step >= 10) return setDone(true);
   }
 
   function shuffle(array: string[]) {
@@ -59,13 +61,13 @@ export default function Fean() {
   }
 
   return (
-    <section className="flex flex-col mt-10 container w-[30ch] mx-auto text-3xl">
+    <section className="flex flex-col pt-10 container w-[calc(40ch+16px)] mx-auto text-3xl">
       {done ? (
         <>
           <h2 className="flex">
             <span className="font-bold">ชื่อของท่าน</span>
             <div className="grow" />
-            <span>{score}/10 คะแนน</span>
+            <span>{score}%</span>
           </h2>
           <br />
           <input
@@ -82,20 +84,25 @@ export default function Fean() {
         </>
       ) : question ? (
         <>
-          <h2>
-            <span className="font-bold">{step}: </span>
-            <span className="font-semibold">{question[step - 1].question}</span>
-          </h2>
+          <div className="p-10 bg-white shadow-xl">
+            <h2>
+              <span className="font-bold">{step}: </span>
+              <span className="font-semibold">{question[step - 1].question}</span>
+            </h2>
+          </div>
           <br />
           <form>
-            <section className="grid grid-cols-2 justify-items-center gap-16">
-              {shuffle(question[step - 1].answer).map((ans) => (
-                <section key={ans}>
+            <section className="grid grid-cols-2 justify-items-center gap-4">
+              {shuffle(question[step - 1].answer).map((ans, index) => (
+                <section
+                  key={ans}
+                  className={`h-16 group cursor-pointer shadow-xl w-[20ch] text-center flex justify-center text-white ${bgColor[index]}`}
+                  onClick={() => formHandler(ans)}
+                >
                   <input
                     type="button"
-                    onClick={() => formHandler(ans)}
                     value={ans}
-                    className="cursor-pointer hover:font-semibold"
+                    className="group-hover:font-semibold cursor-pointer"
                   />
                 </section>
               ))}

@@ -4,8 +4,7 @@ const Sidebar = () => {
   return (
     <Fragment>
       <aside
-        className={`w-64 transition-transform border border-red-700 bg-[url('/background.jpeg')] bg-repeat 
-        `}
+        className={`w-64 transition-transform border-r border-gray-200 bg-[url('/background.jpeg')] bg-repeat`}
       >
         <div className="px-3 overflow-y-auto">
           <ul className="space-y-2 font-medium">
