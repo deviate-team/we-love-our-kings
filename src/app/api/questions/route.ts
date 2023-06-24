@@ -1,4 +1,3 @@
-import { getDataFromJson } from "@/utils/file";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
