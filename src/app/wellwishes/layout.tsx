@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="bg-[url('/background.jpeg')] bg-repeat h-screen w-full">
+    <main className="bg-[url('/background.jpeg')] min-h-screen w-full">
       <section>{children}</section>
     </main>
   );

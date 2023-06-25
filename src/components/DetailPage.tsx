@@ -1,3 +1,5 @@
+"use client"
+
 import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 
