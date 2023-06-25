@@ -49,7 +49,7 @@ export default function Navbar({ toggleSidebar }: NavbarProps) {
                                             href="/wellwishes"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
-                                            ลงนามเฉลิมพระเกียรติ
+                                            ลงนามถวายพระพร
                                         </Link>
                                     </li>
                                     <li>
