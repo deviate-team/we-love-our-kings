@@ -2,6 +2,7 @@
 
 import { IKing } from "@/interfaces/king";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 async function getKingDataById(id: number) {
   const response = await fetch(`https://raw.githubusercontent.com/deviate-team/we-love-our-kings/dev/src/data/kings.json`);

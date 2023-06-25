@@ -2,9 +2,9 @@ import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card({ id, name, fullName, bio, image }: IKing) {
+export default function Card({ id, name, fullName, image }: IKing) {
   return (
-    <Link href={`/king/${id}`}>
+    <Link href={name !== 'รัชกาลที่ 10' ? `/king/${id}` : '/404'}>
       <div className="h-full flex-1 bg-white relative shadow-lg">
         <div className="h-80 relative rounded-lg">
           <div className="block h-full relative">
