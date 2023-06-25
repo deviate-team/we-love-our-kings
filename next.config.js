@@ -9,6 +9,9 @@ const nextConfig = {
     ],
     domains: ["localhost"],
   },
+  experimental: {
+    appDir: true,
+  },
   output: "standalone",
 };
 
