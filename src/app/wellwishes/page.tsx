@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function WellWishes() {
   const [submitted, setSubmitted] = useState<boolean>(false);
@@ -33,20 +33,26 @@ export default function WellWishes() {
           value="ลงนามถวายพระพร"
           className="cursor-pointer hover:text-yellow-900 transition duration-150 ease-in-out text-blue-800"
         />
+        <br />
+        <audio controls autoPlay className="mx-auto">
+          <source src="bgmusic.mp3" type="audio/mpeg" />
+        </audio>
       </form>
 
-      {submitted &&
+      {submitted && (
         <div>
-          <p className="text-3xl text-center mt-8 text-blue-800 font-extrabold">ลงนามไปเถอะ สุดท้ายเขาก็ไม่ได้อ่านอยู่ดี</p>
-          <div className='flex justify-center mt-10'>
+          <p className="text-3xl text-center mt-8 text-blue-800 font-extrabold">
+            ลงนามไปเถอะ สุดท้ายเขาก็ไม่ได้อ่านอยู่ดี
+          </p>
+          <div className="flex justify-center mt-10">
             <iframe
-              className='items-center w-96 h-60'
+              className="items-center w-96 h-60"
               src="https://www.youtube.com/embed/VutbmKvkERM"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"
             ></iframe>
           </div>
         </div>
-      }
+      )}
     </>
   );
 }
