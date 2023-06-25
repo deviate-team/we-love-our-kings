@@ -12,7 +12,6 @@
 /.next/
 /out/
 
-
 yarn.lock
 pnpm-lock.yaml
 
