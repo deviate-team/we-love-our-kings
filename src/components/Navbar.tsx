@@ -46,10 +46,10 @@ export default function Navbar({ toggleSidebar }: NavbarProps) {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/"
+                                            href="/wellwishes"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
-                                            ราชวงศ์จักรี
+                                            ลงนามเฉลิมพระเกียรติ
                                         </Link>
                                     </li>
                                     <li>

@@ -37,7 +37,7 @@ export default function WellWishes() {
 
       {submitted &&
         <div>
-          <p className="text-3xl text-center mt-8">ลงนามไปเถอะ สุดท้ายเขาก็ไม่ได้อ่านอยู่ดี</p>
+          <p className="text-3xl text-center mt-8 text-blue-800 font-extrabold">ลงนามไปเถอะ สุดท้ายเขาก็ไม่ได้อ่านอยู่ดี</p>
           <div className='flex justify-center mt-10'>
             <iframe
               className='items-center w-96 h-60'
