@@ -14,7 +14,7 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
                         <div className="flex items-center justify-start">
                             <button
                                 type="button"
-                                className="inline-flex items-center p-2 text-sm text-blue-800"
+                                className="lg:inline-flex hidden items-center p-2 text-sm text-blue-800"
                                 onClick={toggleSidebar}
                             >
                                 <svg
@@ -33,7 +33,7 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
                             </button>
                         </div>
 
-                        <div className="hidden md:flex items-center justify-center">
+                        <div className="hidden lg:flex items-center justify-center">
                             <div className="flex items-center ml-3">
                                 <ul className="flex p-4 md:p-0 mt-4 font-medium borderrounded-lg flex-row space-x-14 md:mt-0 border-0">
                                     <li>

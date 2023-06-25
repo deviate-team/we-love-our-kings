@@ -1,6 +1,7 @@
 "use client";
 
 import Banner from "@/components/Banner";
+import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { Inter } from "next/font/google";
@@ -14,7 +15,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const toggleSidebar = () => {
     setOpen(!open);
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Header />
         <Banner />
         <Navbar toggleSidebar={toggleSidebar} />
         <main className="flex">
