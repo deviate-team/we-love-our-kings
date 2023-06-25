@@ -115,6 +115,9 @@ export default function Fean() {
               ))}
             </section>
           </form>
+          <audio controls autoPlay className="absolute bottom-0 right-0">
+            <source src="kahoot.mp3" type="audio/mpeg" />
+          </audio>
         </>
       ) : null}
     </section>
