@@ -5,11 +5,11 @@ interface NavbarProps {
     toggleSidebar: () => void;
 }
 
-const Navbar = ({ toggleSidebar }: NavbarProps) => {
+export default function Navbar({ toggleSidebar }: NavbarProps) {
     return (
         <Fragment>
-            <nav className="w-full bg-[url('/background.jpeg')]">
-                <div className="px-3 py-3 lg:px-5 lg:pl-3">
+            <nav className="w-full lg:bg-[url('/background.jpeg')]">
+                <div className="lg:px-5 lg:pl-3 lg:py-2">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center justify-start">
                             <button
@@ -46,10 +46,10 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/wellwishes"
+                                            href="/"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
-                                            ลงนามถวายพระพร
+                                            ราชวงศ์จักรี
                                         </Link>
                                     </li>
                                     <li>
@@ -69,6 +69,4 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
             </nav>
         </Fragment>
     );
-};
-
-export default Navbar;
+}

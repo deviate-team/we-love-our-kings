@@ -7,7 +7,7 @@ interface PageProps {
   };
 }
 
-const Page = async ({ params }: PageProps) => {
+export default async function Page({ params }: PageProps) {
   const slug = params.slug;
   const title = `KING RAMA ${slug} -  We love our king`;
   return (
@@ -16,6 +16,4 @@ const Page = async ({ params }: PageProps) => {
       <DetailPage id={slug} />
     </Fragment>
   );
-};
-
-export default Page;
+}

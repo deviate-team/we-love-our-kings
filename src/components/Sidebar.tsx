@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 
-const Sidebar = () => {
+export default function Sidebar() {
   return (
     <Fragment>
       <aside
@@ -280,6 +280,4 @@ const Sidebar = () => {
       </aside>
     </Fragment>
   );
-};
-
-export default Sidebar;
+}
