@@ -2,7 +2,7 @@
 
 import { IKing } from "@/interfaces/king";
 import Image from "next/image";
-import { NextRouter, useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 async function getKingDataById(id: number) {
   const response = await fetch(`https://raw.githubusercontent.com/deviate-team/we-love-our-kings/dev/src/data/kings.json`);
@@ -19,9 +19,6 @@ async function getKingDataById(id: number) {
 
 export default async function DetailPage({ id }: { id: number }) {
   const data = (await getKingDataById(id)) as IKing;
-  if (data.name === 'รัชกาลที่ 10') {
-    window.location.href = '/404'
-  }
   return (
     <section className="bg-[url('/header-bg.png')] bg-repeat h-full">
       <div className="py-8 text-left lg:py-16 lg:px-12">

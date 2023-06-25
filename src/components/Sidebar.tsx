@@ -11,7 +11,7 @@ export default function Sidebar() {
           <ul className="space-y-2 font-medium">
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base mb-10"
               >
                 <span>ข่าวสารและกิจกรรม</span>
@@ -19,7 +19,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base"
               >
                 <span>มัลติมิเดีย</span>
@@ -27,7 +27,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -49,7 +49,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -67,7 +67,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -85,7 +85,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg mb-10"
               >
                 <svg
@@ -107,7 +107,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base"
               >
                 <span>เนื้อหาที่น่าสนใจ</span>
@@ -115,7 +115,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -137,7 +137,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -159,7 +159,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -181,7 +181,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg mb-10"
               >
                 <svg
@@ -203,7 +203,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-blue-800 rounded-lg font-medium text-base"
               >
                 <span>ท่องเที่ยวเชิงการศึกษา</span>
@@ -211,7 +211,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -233,7 +233,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
@@ -255,7 +255,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/forbidden"
                 className="flex items-center p-2 text-gray-900 rounded-lg"
               >
                 <svg
