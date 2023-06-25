@@ -10,7 +10,12 @@ export default function Fean() {
   const [step, setStep] = useState(1);
   const [done, setDone] = useState(false);
 
-  const bgColor = ["bg-red-500", "bg-blue-500", "bg-yellow-500", "bg-green-500"]
+  const bgColor = [
+    "bg-red-500",
+    "bg-blue-500",
+    "bg-yellow-500",
+    "bg-green-500",
+  ];
 
   async function getQuestion() {
     fetch("/api/questions")
@@ -87,7 +92,9 @@ export default function Fean() {
           <div className="p-10 bg-white shadow-xl">
             <h2>
               <span className="font-bold">{step}: </span>
-              <span className="font-semibold">{question[step - 1].question}</span>
+              <span className="font-semibold">
+                {question[step - 1].question}
+              </span>
             </h2>
           </div>
           <br />
@@ -96,13 +103,13 @@ export default function Fean() {
               {shuffle(question[step - 1].answer).map((ans, index) => (
                 <section
                   key={ans}
-                  className={`h-16 group cursor-pointer shadow-xl w-[20ch] text-center flex justify-center text-white ${bgColor[index]}`}
+                  className={`h-32 group cursor-pointer shadow-xl w-[20ch] text-center flex justify-center text-white transition duration-150 ease-in-out ${bgColor[index]}`}
                   onClick={() => formHandler(ans)}
                 >
                   <input
                     type="button"
                     value={ans}
-                    className="group-hover:font-semibold cursor-pointer"
+                    className="group-hover:font-semibold cursor-pointer w-[15ch] whitespace-break-spaces"
                   />
                 </section>
               ))}
