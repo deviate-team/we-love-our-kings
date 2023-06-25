@@ -2,7 +2,7 @@ import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ id, name, fullName, bio, image }: IKing) => {
+const Card = ({ id, name, fullName, image }: IKing) => {
     return (
         <Link href={`/king/${id}`}>
             <div className="h-full flex-1 bg-white relative shadow-lg">

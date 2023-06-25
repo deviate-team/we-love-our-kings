@@ -1,15 +1,11 @@
+"use client"
+
 import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 
-const getKingDataById = async (id: number) => {
-    const response = await fetch(
-        `http://localhost:3000/api/kings/${id}`
-    );
-    if (response.ok) {
-        const data = await response.json();
-        return data;
-    }
-    return {};
+async function getKingDataById(id: number) {
+    const response = await fetch(`http://localhost:3000/api/kings/${id}`);
+    return response.json();
 }
 
 export default async function DetailPage({ id }: { id: number }) {

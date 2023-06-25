@@ -2,13 +2,8 @@ import { IKing } from "@/interfaces/king";
 import Card from "./Card";
 
 async function getKingData() {
-    const response = await fetch(
-        "http://localhost:3000/api/kings"
-    );
-    if (response.ok) {
-        return response.json();
-    }
-    return [];
+    const response = await fetch("http://localhost:3000/api/kings");
+    return response.json();
 }
 
 export default async function MainPage() {

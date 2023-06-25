@@ -46,22 +46,6 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
                                     </li>
                                     <li>
                                         <Link
-                                            href="/"
-                                            className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
-                                        >
-                                            ราชวงศ์จักรี
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            href="/"
-                                            className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
-                                        >
-                                            พระราชกรณียกิจ
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
                                             href="/wellwishes"
                                             className="block py-2 pl-3 pr-4 text-blue-800 rounded text-xl font-extralight hover:underline"
                                         >
