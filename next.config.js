@@ -9,7 +9,6 @@ const nextConfig = {
     ],
     domains: ["localhost"],
   },
-  reactStrictMode: true,
   output: "standalone",
 };
 
