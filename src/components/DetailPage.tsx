@@ -4,16 +4,20 @@ import { IKing } from "@/interfaces/king";
 import Image from "next/image";
 
 async function getKingDataById(id: number) {
-  const response = await fetch(`http://localhost:3000/api/kings/${id}`);
-  if (response.ok) {
-    const data = await response.json();
-    return data;
+  const response = await fetch(`https://raw.githubusercontent.com/deviate-team/we-love-our-kings/dev/src/data/kings.json`);
+  if (!response.ok) {
+    throw new Error(response.statusText);
   }
-  return {};
+
+  if (response.ok) {
+    const data = (await response.json()) as IKing[];
+    return data[id - 1];
+  }
+
 }
 
 export default async function DetailPage({ id }: { id: number }) {
-  const data: IKing = await getKingDataById(id);
+  const data = (await getKingDataById(id)) as IKing;
   return (
     <section className="bg-[url('/header-bg.png')] bg-repeat h-full">
       <div className="py-8 text-left lg:py-16 lg:px-12">
