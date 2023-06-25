@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 
 export default function Fean() {
   const [question, setQuestion] = useState<IQuestion[]>();
-  const [score, setScore] = useState(0);
-  const [step, setStep] = useState(1);
-  const [done, setDone] = useState(false);
+  const [score, setScore] = useState<number>(0);
+  const [step, setStep] = useState<number>(1);
+  const [done, setDone] = useState<boolean>(false);
 
-  const bgColor = [
+  const bgColor: string[] = [
     "bg-red-500",
     "bg-blue-500",
     "bg-yellow-500",
@@ -37,7 +37,7 @@ export default function Fean() {
   }, []);
 
   function formHandler(answer: string) {
-    setStep((prev) => prev + 1);
+    setStep((prev: number) => prev + 1);
 
     if (answer === "รัก") {
       setScore(100);
@@ -66,7 +66,7 @@ export default function Fean() {
   }
 
   return (
-    <section className="flex flex-col pt-10 container w-[calc(40ch+16px)] mx-auto text-3xl">
+    <section className="flex flex-col pt-10 container max-w-[calc(40ch+16px)] w-full mx-auto text-3xl">
       {done ? (
         <>
           <h2 className="flex">
@@ -99,17 +99,17 @@ export default function Fean() {
           </div>
           <br />
           <form>
-            <section className="grid grid-cols-2 justify-items-center gap-4">
+            <section className="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2">
               {shuffle(question[step - 1].answer).map((ans, index) => (
                 <section
                   key={ans}
-                  className={`h-32 group cursor-pointer shadow-xl w-[20ch] text-center flex justify-center text-white transition duration-150 ease-in-out ${bgColor[index]}`}
+                  className={`h-32 group cursor-pointer shadow-xl max-w-[20ch] w-full text-center flex justify-center text-white transition duration-150 ease-in-out ${bgColor[index]}`}
                   onClick={() => formHandler(ans)}
                 >
                   <input
                     type="button"
                     value={ans}
-                    className="group-hover:font-semibold cursor-pointer w-[15ch] whitespace-break-spaces"
+                    className="group-hover:font-semibold cursor-pointer max-w-[15ch] w-full whitespace-break-spaces"
                   />
                 </section>
               ))}
